@@ -1,16 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Форма выбора питомца</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<main>
-    <h1>Найди себе друга!</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Форма выбора питомца</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main>
+            <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+            <form method="POST" action="/pets/orders">
+                <div>
+                    <label for="petType">Тип животного</label>
+                    <select id="petType" name="petType">
+                        <option value="cat" selected>Кот</option>
+                        <option value="dog">Собака</option>
+                        <option value="tiger">Тигр</option>
+                    </select>
+                </div>
 
-</main>
-</body>
+                <fieldset>
+                    <legend>Пол</legend>
+                    <label>
+                        <input type="radio" name="gender" value="boy" checked />
+                        Мальчик
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="girl" />
+                        Девочка
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="none" />
+                        Не указан
+                    </label>
+                </fieldset>
+
+                <div>
+                    <label for="eyeColor">Цвет глаз</label>
+                    <input
+                        type="color"
+                        id="eyeColor"
+                        name="eyeColor"
+                        value="#1a7f37"
+                    />
+                </div>
+
+                <div>
+                    <label for="tailLength"
+                        >Длина хвоста:
+                        <output id="tailLengthOutput">30</output> см</label
+                    >
+                    <input
+                        type="range"
+                        id="tailLength"
+                        name="tailLength"
+                        min="7"
+                        max="120"
+                        value="30"
+                        oninput="
+                            document.getElementById(
+                                'tailLengthOutput',
+                            ).textContent = this.value
+                        "
+                    />
+                </div>
+
+                <button type="submit">Отправить заказ</button>
+            </form>
+        </main>
+    </body>
 </html>
