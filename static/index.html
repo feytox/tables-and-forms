@@ -65,6 +65,63 @@
                     />
                 </div>
 
+                <div>
+                    <label for="name">Имя хозяина</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Введите ваше имя"
+                        minlength="3"
+                        maxlength="50"
+                        value="Иван"
+                    />
+                </div>
+
+                <div>
+                    <label for="dateOfBirth">Дата рождения</label>
+                    <input
+                        type="date"
+                        id="dateOfBirth"
+                        name="dateOfBirth"
+                        value="2000-01-15"
+                    />
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@mail.com"
+                        value="test@example.com"
+                    />
+                </div>
+
+                <div>
+                    <label for="phone">Телефон</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+7 (999) 123-45-67"
+                        value="+79991234567"
+                    />
+                </div>
+
+                <div>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="rules"
+                            value="true"
+                            checked
+                        />
+                        Я согласен с правилами
+                    </label>
+                </div>
+
                 <button type="submit">Отправить заказ</button>
             </form>
         </main>
